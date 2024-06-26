@@ -16,5 +16,5 @@ jobs:
         env:
           MY_VAL_VAR: ${{ vars.MY_VAR }}
         run: |
-          echo '$MY_VAL_VAR'
+          echo "vars ${{ toJson(vars) }}"
       
