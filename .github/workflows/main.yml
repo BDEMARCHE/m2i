@@ -18,5 +18,4 @@ jobs:
         run: echo "Hello,world!"
         
       - name: echo MY_VAR
-        run: echo ${MY_VAL_VAR}
-      
+        run: echo $MY_VAL_VAR      
