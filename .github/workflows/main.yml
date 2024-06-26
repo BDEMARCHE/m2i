@@ -17,5 +17,5 @@ jobs:
         
       - name: echo MY_VAR
         env:
-          MY_VAL_VAR: ${{ env.MY_VAR }}
+          MY_VAL_VAR: ${{ vars.MY_VAR }}
         run: echo $MY_VAL_VAR      
