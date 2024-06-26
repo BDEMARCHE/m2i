@@ -8,4 +8,7 @@ on:
 
 jobs:
   call_reusable_workflow:
-    uses: BDEMARCHE/reusableworkflow/.github/workflows/
+    uses: BDEMARCHE/reusableworkflow/.github/workflows/reusable-workflow.yml@main
+    with:
+      name: 'Bruno DEMARCHE'
+      run-tests: true
