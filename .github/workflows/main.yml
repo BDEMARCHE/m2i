@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+env:
+  MY_VAL_VAR: ${{ env.MY_VAR }}
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,11 +13,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        
       - name: Run a one-line script
         run: echo "Hello,world!"
+        
       - name: echo MY_VAR
-        env:
-          MY_VAL_VAR: ${{ vars.MY_VAR }}
-        run: |
-          echo "vars ${{ toJson(vars) }}"
+        run: echo ${MY_VAL_VAR}
       
