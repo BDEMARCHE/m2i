@@ -1,0 +1,11 @@
+# .github/workflows/call_workflow.yml
+name: Main workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call_reusable_workflow:
+    uses: BDEMARCHE/reusableworkflow/.github/workflows/
